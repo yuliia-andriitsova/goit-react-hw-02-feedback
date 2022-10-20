@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { SectionFeedback } from './Section/Section';
+import { Message } from './Message/Message';
 
 const options = [
   { title: 'Good', name: 'good' },
@@ -40,7 +41,6 @@ export class App extends Component {
             onLeaveFeedback={this.handleChange}
           />
         </SectionFeedback>
-
         <SectionFeedback title="Statistics">
           <Statistics
             good={this.state.good}
