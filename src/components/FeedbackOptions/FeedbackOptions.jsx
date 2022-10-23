@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import css from './FeedbackOptions.module.css';
 
 export function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <div>
+    <div className={css.buttons}>
       {options.map(item => (
         <button
           key={item.name}

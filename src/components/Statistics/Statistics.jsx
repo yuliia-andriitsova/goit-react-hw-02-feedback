@@ -1,5 +1,6 @@
 import { Message } from 'components/Message/Message';
 import PropTypes from 'prop-types';
+import css from './Stastistics.module.css';
 
 export const Statistics = ({
   good,
@@ -9,7 +10,7 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return total ? (
-    <div>
+    <div className={css.Statistics}>
       <span>Good : {good}</span>
       <span>Neutral : {neutral}</span>
       <span>Bad : {bad}</span>
