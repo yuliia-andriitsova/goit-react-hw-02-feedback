@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
 
-export function FeedbackOptions({ options, onLeaveFeedback }) {
+export function FeedbackOptions({ onLeaveFeedback, arrayState }) {
   return (
     <div className={css.buttons}>
-      {options.map(item => (
+      {Object.keys(arrayState).map(item => (
         <button
-          key={item.name}
-          name={item.name}
+          key={item}
+          name={item}
           type="button"
           onClick={event => onLeaveFeedback(event)}
         >
-          {item.title}
+          {item}
         </button>
       ))}
     </div>
@@ -24,3 +24,10 @@ FeedbackOptions.propTypes = {
   ),
   onLeaveFeedback: PropTypes.func,
 };
+const yu = {
+  if: 0,
+  yui: 4,
+  eyt: 6,
+};
+
+console.log(Object.keys(yu).map(it => it));

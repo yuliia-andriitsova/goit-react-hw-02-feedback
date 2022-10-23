@@ -3,11 +3,11 @@ import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { SectionFeedback } from './Section/Section';
 
-const options = [
-  { title: 'Good', name: 'good' },
-  { title: 'Neutral', name: 'neutral' },
-  { title: 'Bad', name: 'bad' },
-];
+// const options = [
+//   { title: 'Good', name: 'good' },
+//   { title: 'Neutral', name: 'neutral' },
+//   { title: 'Bad', name: 'bad' },
+// ];
 
 export class App extends Component {
   state = {
@@ -36,7 +36,8 @@ export class App extends Component {
       <div>
         <SectionFeedback title="Please leave feedback">
           <FeedbackOptions
-            options={options}
+            arrayState={this.state}
+            // options={options}
             onLeaveFeedback={this.handleChange}
           />
         </SectionFeedback>
