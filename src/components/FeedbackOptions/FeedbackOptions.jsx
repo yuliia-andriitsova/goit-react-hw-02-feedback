@@ -24,10 +24,3 @@ FeedbackOptions.propTypes = {
   ),
   onLeaveFeedback: PropTypes.func,
 };
-const yu = {
-  if: 0,
-  yui: 4,
-  eyt: 6,
-};
-
-console.log(Object.keys(yu).map(it => it));
